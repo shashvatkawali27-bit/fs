@@ -1,0 +1,24 @@
+
+import { useState } from 'react';
+
+function App() {
+  const [colour, setColour] = useState("--");
+
+  function HandleClick(c) {
+    setColour(c);
+    document.body.style.backgroundColor = c;
+  }
+
+  return (
+    <>
+      <h1>You have clicked {colour} button</h1>
+
+      <button onClick={() => HandleClick('red')}>Red</button>
+      <button onClick={() => HandleClick('blue')}>Blue</button>
+      <button onClick={() => HandleClick('yellow')}>Yellow</button>
+      <button onClick={() => HandleClick('green')}>Green</button>
+    </>
+  );
+}
+
+export default App;
