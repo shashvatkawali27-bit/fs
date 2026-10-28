@@ -1,0 +1,39 @@
+<html> 
+<body> 
+<h2>WELCOME TO RCOE!</h2> 
+<form action="welcome" method="get"> 
+<label for="myname">Enter Your Name:</label> 
+<input type="text" name="myname" id="myname"> 
+<button type="submit">Submit</button> 
+</form> 
+</body> 
+</html>
+
+<html> 
+<body> 
+<h2>Addition</h2> 
+<form action="add" method="post"> 
+<label for="num1">Enter First Number</label> 
+<input type="number" name="num1" id="num1"> 
+<br> 
+<label for="num2">Enter Second Number</label> 
+<input type="number" name="num2" id="num2"> 
+<br> 
+<button type="submit">Submit</button> 
+</form> 
+</body> 
+</html>
+
+response.setContentType("text/html"); 
+String myname = request.getParameter("myname"); 
+PrintWriter out = response.getWriter(); 
+out.println("<h1>Welcome "+ myname +"</h1>"); 
+
+response.setContentType("text/html"); 
+int num1 = Integer.parseInt(request.getParameter("num1")); 
+int num2 = Integer.parseInt(request.getParameter("num2")); 
+int sum = num1 + num2; 
+PrintWriter out = response.getWriter();  
+out.println("<h1>Sum of two numbers " 
++ num1 + " and " + num2 + " is: " + 
+sum + "</h1>"); 

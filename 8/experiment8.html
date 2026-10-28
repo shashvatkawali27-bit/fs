@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>emailValidation</title>
+</head>
+<body>
+    <input type="text" id="email">
+    <button onclick="emailValidation()">validation</button>
+    <div id="result">--</div>
+    <script>
+        function emailValidation(){
+            let emailEle=document.querySelector("#email");
+            
+            let email=emailEle.value;
+
+            const emailRegex=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            let resultEle=document.querySelector("#result");
+            if(emailRegex.test(email)){
+                resultEle.innerHTML="validate";
+            }
+            else
+            {
+                resultEle.innerHTML="not validate";
+            }
+        }
+    </script>
+</body>
+</html>

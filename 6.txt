@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>Implicit and Explicit Objects</title>
+</head>
+<body>
+
+<form action="welcome.jsp" method="get">
+
+    <h2>Implicit and Explicit Object</h2>
+
+    <div>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required>
+    </div>
+
+    <div>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+    </div>
+
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+
+</form>
+</body>
+</html>
+
+<html>
+<head>
+    <title>Welcome</title>
+</head>
+<body>
+<div class="container">
+    <h2>Welcome</h2>
+    <h3>Good morning <%= request.getParameter("name") %></h3>
+    <p> Email: <%= request.getParameter("email") %></p>
+    <h4>Date & Time: <%= new Date() %></h4>
+</div>
+</body>
+</html>

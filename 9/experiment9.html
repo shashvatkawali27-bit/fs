@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BGcolourchange</title>
+</head>
+<body style="text-align: center;background-color: aqua;">
+    <h1>welcome to RCOE</h1>
+    <h2>hi i am shashvat kawali</h2>
+    <button onclick="changeBG()">click this</button>
+    <script>
+        function changeBG(){
+            let colours=["blue","red","green","yellow"];
+            let element=document.querySelector("body");
+            let index=Math.floor(Math.random()*colours.length);
+            element.style.backgroundColor=colours[index];
+        }
+
+        setInterval(changeBG, 5000);
+
+    </script>
+    
+</body>
+</html>

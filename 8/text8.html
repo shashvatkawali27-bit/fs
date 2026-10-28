@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>emailValidation</title>
+</head>
+<body>
+    <form action="#">
+        <input type="text" id="name" placeholder="name">
+        <input type="text" id="email" placeholder="email">
+        <input type="text" id="password" placeholder="password">
+        <input type="text" id="passwordConfirm" placeholder="passwordConfirm">
+        <button onclick="emailValidation()">submit</button>
+    </form>
+   
+    <script>
+        function emailValidation(){
+            
+            let emailEle=document.querySelector("#email");
+            let email=emailEle.value;
+            
+            const emailRegex=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if(!emailRegex.test(email)){
+                alert("wrong email")
+                return false;
+            }
+            
+        
+            let passwordEle = document.querySelector("#password");
+            let passwordEle1 = document.querySelector("#passwordConfirm");
+
+            if (passwordEle.value.length < 8) {
+                alert("Password must be at least 8 characters long");
+                return false;
+            }
+
+            if (passwordEle.value !== passwordEle1.value) {
+                alert("Passwords do not match");
+                return false;
+            }
+
+
+            
+        }
+    </script>
+</body>
+</html>

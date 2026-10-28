@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change</title>
+</head>
+<body style="text-align: center;background-color: aqua;">
+    <h1>welcome to RCOE</h1>
+    <button onclick="change()">click this</button>
+    <script>
+        function change(){
+            let colours=["blue","red","green","yellow"];
+            let fontSize=["11px","34px"];
+            let textColour=["white","blue"];
+
+
+            let element=document.querySelector("body");
+            let element1=document.querySelector("h1");
+            let index1=Math.floor(Math.random()*colours.length);
+            let index2=Math.floor(Math.random()*fontSize.length);
+            let index3=Math.floor(Math.random()*textColour.length);
+            element.style.backgroundColor=colours[index1];
+            element1.style.fontSize=fontSize[index2];
+            element1.style.color=textColour[index3];
+        }
+
+        setInterval(change, 5000);
+
+    </script>
+    
+</body>
+</html>
